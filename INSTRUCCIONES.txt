@@ -1,0 +1,8 @@
+NEIMCSA - NUEVA WEB
+
+1. Sube index.html y catalogo.js a la raíz del repositorio.
+2. Conserva la carpeta imagenes/ que ya tienes.
+3. Si tienes logo.png, colócalo en la raíz del repositorio.
+4. No borres la carpeta imagenes/epp/.
+5. El WhatsApp configurado es 51967365219.
+6. Para agregar productos en el futuro, se modifica solamente catalogo.js.
