@@ -109,22 +109,6 @@ const productos = [
   {
     "categoria": "Limpieza e higiene",
     "marca": "SUMAC PLAST",
-    "nombre": "Papelera Siki #10",
-    "sku": "PTASEPAP0016",
-    "descripcion": "Tapa bisagra. Colorido.",
-    "imagen": "imagenes/limpieza/sumac-papelera-siki-10.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "SUMAC PLAST",
-    "nombre": "Papelera Willay #25",
-    "sku": "PTASEPAP0006",
-    "descripcion": "20 L. Tapa bisagra.",
-    "imagen": "imagenes/limpieza/sumac-papelera-willay-25.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "SUMAC PLAST",
     "nombre": "Papelera Rumi #35 con tapa vaivén",
     "sku": "PTASEPAP0003-01",
     "descripcion": "35 L. Ecológica. Tapa vaivén.",
@@ -185,14 +169,6 @@ const productos = [
     "sku": "PTMUEBAN0002-3",
     "descripcion": "Plegable y super resistente. 51.1 × 30.5 × 39 cm.",
     "imagen": "imagenes/limpieza/sumac-silla-plegable-sinchi.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "Hude",
-    "nombre": "Escoba Oriental",
-    "sku": "No indicado en la ficha consultada",
-    "descripcion": "Escoba Hude para limpieza de pisos.",
-    "imagen": "imagenes/limpieza/hude-escoba-oriental.jpg"
   },
   {
     "categoria": "Limpieza e higiene",
@@ -285,14 +261,6 @@ const productos = [
   {
     "categoria": "Limpieza e higiene",
     "marca": "Basa Hogar",
-    "nombre": "Canasta Caserita",
-    "sku": "8",
-    "descripcion": "45.8 × 40.3 × 16.8 cm.",
-    "imagen": "imagenes/limpieza/basa-canasta-caserita.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "Basa Hogar",
     "nombre": "Canasta Criollita con Asa",
     "sku": "9",
     "descripcion": "39.0 × 55.2 × 18.14 cm.",
@@ -305,14 +273,6 @@ const productos = [
     "sku": "8002",
     "descripcion": "37.5 × 16.3 × 12.0 cm.",
     "imagen": "imagenes/limpieza/basa-hisopo-sanitario.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "Basa Hogar",
-    "nombre": "Cepillo W.C. Bonus",
-    "sku": "9165",
-    "descripcion": "12.0 × 26.5 × 25.2 cm.",
-    "imagen": "imagenes/limpieza/basa-cepillo-wc-bonus.jpg"
   },
   {
     "categoria": "Limpieza e higiene",
@@ -893,34 +853,10 @@ const productos = [
   {
     "categoria": "Limpieza e higiene",
     "marca": "BASA",
-    "nombre": "Balde Industrial 20 L Serigrafiado",
-    "sku": "9120",
-    "descripcion": "20 L",
-    "imagen": "imagenes/limpieza/basa-balde-industrial-20l-serigrafiado.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "BASA",
-    "nombre": "Balde Industrial 20 L Heat Transfer",
-    "sku": "9350",
-    "descripcion": "20 L",
-    "imagen": "imagenes/limpieza/basa-balde-industrial-20l-heat-transfer.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "BASA",
     "nombre": "Balde Industrial Cuadrado 16 L Asa Plástica",
     "sku": "8640",
     "descripcion": "16 L",
     "imagen": "imagenes/limpieza/basa-balde-industrial-cuadrado-16l-asa-plastica.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "BASA",
-    "nombre": "Balde Industrial Cuadrado 16 L Asa Serigrafiado",
-    "sku": "8827",
-    "descripcion": "16 L",
-    "imagen": "imagenes/limpieza/basa-balde-industrial-cuadrado-16l-asa-serigrafiado.jpg"
   },
   {
     "categoria": "Limpieza e higiene",
