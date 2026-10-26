@@ -12,171 +12,415 @@
   --azul2:#0b5fa5;
   --celeste:#eaf4fb;
   --gris:#f5f7fa;
-  --texto:#1f2937;
+  --texto:#14213d;
   --blanco:#fff;
-  --borde:#e2e8f0;
+  --verde:#20cf68;
+  --borde:#dfe7ef;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:#fff}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  background:#fff;
+}
 a{text-decoration:none;color:inherit}
 .header{
-  position:sticky;top:0;z-index:50;background:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fff;
   border-bottom:1px solid var(--borde);
-  box-shadow:0 2px 12px rgba(0,0,0,.06)
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
 }
 .nav{
-  max-width:1200px;margin:auto;padding:14px 20px;
-  display:flex;align-items:center;justify-content:space-between;gap:20px
+  max-width:1200px;
+  margin:auto;
+  min-height:74px;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.logo-wrap{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--azul);font-size:22px}
-.logo-wrap img{width:52px;height:52px;object-fit:contain}
-.nav-links{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:700}
-.nav-links a:hover{color:var(--azul2)}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  color:var(--azul);
+}
+.brand img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+}
+.brand span{font-size:20px}
+.menu{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.menu button{
+  border:0;
+  background:transparent;
+  color:var(--azul);
+  font-weight:700;
+  padding:10px 13px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.menu button:hover,
+.menu button.active{background:var(--celeste)}
 .hero{
-  background:linear-gradient(135deg,var(--azul),var(--azul2));
-  color:#fff;padding:75px 20px
+  background:linear-gradient(135deg,#f4f9fd,#eaf4fb);
+  min-height:420px;
+  display:flex;
+  align-items:center;
 }
-.hero-inner{max-width:1200px;margin:auto}
-.hero h1{font-size:clamp(34px,5vw,58px);margin:0 0 16px;max-width:800px}
-.hero p{font-size:19px;line-height:1.6;max-width:760px;margin:0 0 28px}
+.hero-inner{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:70px 20px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{
+  margin:0 0 18px;
+  color:var(--azul);
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.05;
+}
+.hero p{
+  max-width:700px;
+  font-size:19px;
+  line-height:1.65;
+  color:#425466;
+}
 .btn{
-  display:inline-block;padding:13px 20px;border-radius:10px;
-  background:#fff;color:var(--azul);font-weight:800
+  display:inline-block;
+  border:0;
+  cursor:pointer;
+  padding:14px 24px;
+  border-radius:9px;
+  font-weight:800;
+  font-size:16px;
 }
-.section{max-width:1200px;margin:auto;padding:65px 20px}
-.section h2{font-size:32px;margin:0 0 10px;color:var(--azul)}
-.section-intro{color:#64748b;margin:0 0 30px;line-height:1.6}
+.btn-primary{background:var(--azul2);color:#fff}
+.btn-primary:hover{filter:brightness(.95)}
+.hero-card{
+  background:#fff;
+  border:1px solid var(--borde);
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 12px 35px rgba(18,59,99,.08);
+  text-align:center;
+}
+.hero-card img{
+  max-width:230px;
+  max-height:180px;
+  object-fit:contain;
+}
+section{padding:60px 20px}
+.section-inner{max-width:1200px;margin:auto}
+.section-title{
+  margin:0 0 10px;
+  color:var(--azul);
+  font-size:32px;
+}
+.section-subtitle{
+  margin:0 0 30px;
+  color:#64748b;
+  line-height:1.6;
+}
+.hidden{display:none!important}
+
+/* CATEGORIAS */
 .categories{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
 .category{
-  background:var(--gris);border:1px solid var(--borde);border-radius:16px;
-  padding:22px;min-height:125px;transition:.2s
+  border:1px solid var(--borde);
+  background:#fff;
+  border-radius:14px;
+  padding:22px;
+  cursor:pointer;
+  text-align:left;
+  transition:.2s;
 }
-.category:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.08)}
-.category strong{display:block;color:var(--azul);margin-bottom:8px}
+.category:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.07);
+  border-color:#bcd5e8;
+}
+.category h3{margin:0 0 8px;color:var(--azul)}
+.category p{margin:0;color:#64748b;line-height:1.5}
+
+/* CATALOGO */
 .catalog-tools{
-  display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:30px
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:12px;
+  margin-bottom:25px;
 }
-input,select{
-  width:100%;padding:14px 15px;border:1px solid var(--borde);
-  border-radius:10px;font-size:15px;background:#fff
+.catalog-tools input,
+.catalog-tools select{
+  width:100%;
+  border:1px solid var(--borde);
+  border-radius:9px;
+  padding:14px;
+  font-size:15px;
+  background:#fff;
+}
+.back-row{margin-bottom:20px}
+.btn-back{
+  border:1px solid var(--borde);
+  background:#fff;
+  color:var(--azul);
+  padding:10px 15px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
 }
 .products{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
-.card{
-  border:1px solid var(--borde);border-radius:16px;overflow:hidden;
-  background:#fff;display:flex;flex-direction:column;
-  transition:.2s
+.product{
+  border:1px solid var(--borde);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
 }
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.08)}
-.card-img{height:240px;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px}
-.card-img img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}
-.card-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-image{
+  height:235px;
+  padding:15px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.product-image .no-image{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f7fa;
+  color:#7b8794;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+.product-body{
+  padding:17px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
 .badge{
-  display:inline-block;align-self:flex-start;background:var(--celeste);
-  color:var(--azul);font-size:12px;font-weight:800;padding:6px 9px;border-radius:999px
+  align-self:flex-start;
+  background:#eaf4fb;
+  color:#07548e;
+  padding:6px 9px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
 }
-.brand{font-size:13px;font-weight:800;color:var(--azul2);margin-top:12px}
-.card h3{font-size:19px;margin:7px 0 10px}
-.card p{font-size:14px;line-height:1.5;color:#64748b;margin:0 0 10px}
-.sku{font-size:13px;color:#475569;margin-bottom:18px}
+.brand-name{
+  font-size:13px;
+  color:#07548e;
+  font-weight:800;
+  margin-bottom:7px;
+}
+.product h3{
+  margin:0 0 8px;
+  font-size:17px;
+  color:#14213d;
+  line-height:1.35;
+}
+.product p{
+  margin:0 0 8px;
+  color:#64748b;
+  font-size:13px;
+  line-height:1.5;
+}
+.sku{
+  font-size:12px;
+  color:#315a7d;
+  margin-bottom:16px;
+}
 .quote{
-  display:block;text-align:center;background:#25D366;color:#fff;
-  padding:12px;border-radius:9px;font-weight:800;margin-top:auto
+  margin-top:auto;
+  display:block;
+  text-align:center;
+  background:var(--verde);
+  color:#fff;
+  font-weight:800;
+  padding:12px;
+  border-radius:8px;
 }
-.empty{padding:35px;text-align:center;color:#64748b;grid-column:1/-1}
-.contact{background:var(--gris)}
-.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.contact-card{
-  background:#fff;border:1px solid var(--borde);border-radius:16px;padding:25px
+.quote:hover{filter:brightness(.96)}
+.empty{
+  padding:35px;
+  border:1px dashed #cbd5e1;
+  border-radius:12px;
+  color:#64748b;
+  text-align:center;
 }
-footer{background:var(--azul);color:#fff;text-align:center;padding:30px 20px;font-size:14px}
+
+/* CONTACTO */
+.contact{
+  background:var(--gris);
+}
+.contact-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+.contact-box p{line-height:1.7;color:#64748b}
+
+footer{
+  background:var(--azul);
+  color:#fff;
+  text-align:center;
+  padding:25px 20px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
   .categories{grid-template-columns:repeat(2,1fr)}
   .products{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:650px){
+@media(max-width:620px){
   .nav{align-items:flex-start;flex-direction:column}
-  .nav-links{gap:12px}
-  .hero{padding:55px 20px}
-  .categories,.products,.contact-box,.catalog-tools{grid-template-columns:1fr}
-  .card-img{height:220px}
+  .menu{width:100%}
+  .menu button{padding:8px 10px}
+  .hero-inner{padding:50px 20px}
+  .categories,.products{grid-template-columns:1fr}
+  .catalog-tools{grid-template-columns:1fr}
+  .product-image{height:220px}
 }
 </style>
 </head>
 
 <body>
+
 <header class="header">
   <nav class="nav">
-    <a href="#" class="logo-wrap">
+    <button class="brand" onclick="mostrarInicio()" style="border:0;background:transparent;cursor:pointer;padding:0">
       <img src="logo.png" alt="NEIMCSA" onerror="this.style.display='none'">
       <span>NEIMCSA</span>
-    </a>
-    <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#categorias">Categorías</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contacto">Contacto</a>
+    </button>
+
+    <div class="menu">
+      <button id="navInicio" class="active" onclick="mostrarInicio()">Inicio</button>
+      <button id="navCatalogo" onclick="mostrarCatalogo()">Catálogo</button>
+      <button onclick="mostrarContacto()">Contacto</button>
     </div>
   </nav>
 </header>
 
 <main>
-<section class="hero" id="inicio">
-  <div class="hero-inner">
-    <h1>Soluciones para tu empresa</h1>
-    <p>Encuentra productos de seguridad industrial, limpieza, herramientas, oficina, tecnología, material didáctico y otros servicios de NEIMCSA.</p>
-    <a class="btn" href="#catalogo">Ver catálogo</a>
-  </div>
-</section>
 
-<section class="section" id="categorias">
-  <h2>Categorías</h2>
-  <p class="section-intro">Selecciona una categoría para encontrar rápidamente lo que necesitas.</p>
-  <div class="categories" id="categoryCards"></div>
-</section>
+  <!-- INICIO: NO MUESTRA CATEGORIAS NI PRODUCTOS -->
+  <section id="inicio">
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>Soluciones para tu empresa</h1>
+          <p>
+            Encuentra productos de seguridad industrial, limpieza e higiene,
+            herramientas, oficina, tecnología, material didáctico y otros
+            productos de NEIMCSA.
+          </p>
+          <button class="btn btn-primary" onclick="mostrarCatalogo()">Ver catálogo</button>
+        </div>
 
-<section class="section" id="catalogo">
-  <h2>Catálogo de productos</h2>
-  <p class="section-intro">Busca por producto, marca o código y utiliza el botón de cotización.</p>
-
-  <div class="catalog-tools">
-    <input id="search" type="search" placeholder="Buscar producto, marca o SKU...">
-    <select id="categoryFilter">
-      <option value="">Todas las categorías</option>
-    </select>
-  </div>
-
-  <div class="products" id="products"></div>
-</section>
-
-<section class="section contact" id="contacto">
-  <h2>Contacto</h2>
-  <p class="section-intro">¿Necesitas una cotización? Escríbenos por WhatsApp.</p>
-  <div class="contact-box">
-    <div class="contact-card">
-      <h3>WhatsApp</h3>
-      <p>967 365 219</p>
-      <a class="quote" target="_blank" rel="noopener" href="https://wa.me/51967365219?text=Hola%20NEIMCSA%2C%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos.">Escribir por WhatsApp</a>
+        <div class="hero-card">
+          <img src="logo.png" alt="NEIMCSA" onerror="this.style.display='none'">
+          <h2>Catálogo NEIMCSA</h2>
+          <p>Productos y soluciones para empresas.</p>
+        </div>
+      </div>
     </div>
-    <div class="contact-card">
-      <h3>NEIMCSA</h3>
-      <p>Catálogo comercial de productos y soluciones para empresas.</p>
+  </section>
+
+  <!-- CATALOGO: OCULTO AL ENTRAR A INICIO -->
+  <section id="catalogo" class="hidden">
+    <div class="section-inner">
+      <h2 class="section-title">Catálogo de productos</h2>
+      <p class="section-subtitle">
+        Selecciona una categoría o utiliza el buscador para encontrar un producto.
+      </p>
+
+      <div id="selectorCategorias">
+        <div class="categories" id="categories"></div>
+      </div>
+
+      <div id="productosArea" class="hidden">
+        <div class="back-row">
+          <button class="btn-back" onclick="volverCategorias()">← Volver a categorías</button>
+        </div>
+
+        <div class="catalog-tools">
+          <input id="search" type="search" placeholder="Buscar producto, marca o SKU...">
+          <select id="categoryFilter">
+            <option value="">Todas las categorías</option>
+          </select>
+        </div>
+
+        <div id="products" class="products"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="contacto" class="contact hidden">
+    <div class="section-inner contact-box">
+      <h2 class="section-title">Contacto</h2>
+      <p>
+        Para consultas, cotizaciones o información sobre nuestros productos,
+        comunícate con NEIMCSA.
+      </p>
+      <button class="btn btn-primary" onclick="mostrarCatalogo()">Ver catálogo</button>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   © 2026 NEIMCSA — Catálogo de productos
 </footer>
 
+<!-- TU ARCHIVO ACTUAL DE PRODUCTOS -->
 <script src="catalogo.js"></script>
+
 <script>
-const categories = [
+/*
+  Este index.html utiliza directamente la variable "productos"
+  que ya existe en catalogo.js.
+*/
+
+const categoriasBase = [
   "Seguridad industrial",
   "Limpieza e higiene",
   "Herramientas y ferretería",
@@ -186,75 +430,212 @@ const categories = [
   "Servicios"
 ];
 
+const WHATSAPP_DEFAULT = (typeof WHATSAPP !== "undefined") ? WHATSAPP : "";
+
+const inicio = document.getElementById("inicio");
+const catalogo = document.getElementById("catalogo");
+const contacto = document.getElementById("contacto");
+const categoriesEl = document.getElementById("categories");
 const productsEl = document.getElementById("products");
 const searchEl = document.getElementById("search");
 const filterEl = document.getElementById("categoryFilter");
-const categoryCardsEl = document.getElementById("categoryCards");
+const selectorCategorias = document.getElementById("selectorCategorias");
+const productosArea = document.getElementById("productosArea");
 
-categories.forEach(cat => {
-  const card = document.createElement("a");
-  card.className = "category";
-  card.href = "#catalogo";
-  card.innerHTML = `<strong>${cat}</strong><span>Ver productos de esta categoría →</span>`;
-  card.addEventListener("click", () => {
-    filterEl.value = cat;
-    renderProducts();
-  });
-  categoryCardsEl.appendChild(card);
-
-  const option = document.createElement("option");
-  option.value = cat;
-  option.textContent = cat;
-  filterEl.appendChild(option);
-});
-
-function quoteUrl(product){
-  const text = `Hola NEIMCSA, deseo cotizar este producto:\n\nProducto: ${product.nombre}\nMarca: ${product.marca}\nSKU: ${product.sku}\nCategoría: ${product.categoria}`;
-  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+function setActive(id){
+  document.querySelectorAll(".menu button").forEach(b => b.classList.remove("active"));
+  const el = document.getElementById(id);
+  if(el) el.classList.add("active");
 }
 
-function renderProducts(){
-  const term = searchEl.value.trim().toLowerCase();
-  const category = filterEl.value;
+function mostrarInicio(){
+  inicio.classList.remove("hidden");
+  catalogo.classList.add("hidden");
+  contacto.classList.add("hidden");
 
-  const results = productos.filter(p => {
-    const matchesTerm =
-      !term ||
-      `${p.nombre} ${p.marca} ${p.sku} ${p.descripcion} ${p.subcategoria}`.toLowerCase().includes(term);
-    const matchesCategory = !category || p.categoria === category;
-    return matchesTerm && matchesCategory;
+  // Siempre ocultar productos/categorías al regresar a Inicio
+  selectorCategorias.classList.remove("hidden");
+  productosArea.classList.add("hidden");
+  productsEl.innerHTML = "";
+  searchEl.value = "";
+  filterEl.value = "";
+
+  setActive("navInicio");
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function mostrarCatalogo(){
+  inicio.classList.add("hidden");
+  catalogo.classList.remove("hidden");
+  contacto.classList.add("hidden");
+
+  selectorCategorias.classList.remove("hidden");
+  productosArea.classList.add("hidden");
+
+  setActive("navCatalogo");
+  renderCategorias();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function mostrarContacto(){
+  inicio.classList.add("hidden");
+  catalogo.classList.add("hidden");
+  contacto.classList.remove("hidden");
+  setActive("");
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function volverCategorias(){
+  selectorCategorias.classList.remove("hidden");
+  productosArea.classList.add("hidden");
+  productsEl.innerHTML = "";
+  searchEl.value = "";
+  filterEl.value = "";
+}
+
+function listaProductos(){
+  return Array.isArray(window.productos) ? window.productos :
+         (typeof productos !== "undefined" && Array.isArray(productos) ? productos : []);
+}
+
+function obtenerCategorias(){
+  const datos = listaProductos();
+  const reales = [...new Set(datos.map(p => p.categoria).filter(Boolean))];
+  return [...new Set([...categoriasBase, ...reales])];
+}
+
+function renderCategorias(){
+  const cats = obtenerCategorias();
+  categoriesEl.innerHTML = "";
+
+  cats.forEach(cat => {
+    const cantidad = listaProductos().filter(p => p.categoria === cat).length;
+
+    const card = document.createElement("button");
+    card.className = "category";
+    card.innerHTML = `
+      <h3>${escapeHtml(cat)}</h3>
+      <p>${cantidad} producto${cantidad === 1 ? "" : "s"} disponibles</p>
+    `;
+    card.onclick = () => seleccionarCategoria(cat);
+    categoriesEl.appendChild(card);
+  });
+
+  filterEl.innerHTML = `<option value="">Todas las categorías</option>`;
+  cats.forEach(cat => {
+    const opt = document.createElement("option");
+    opt.value = cat;
+    opt.textContent = cat;
+    filterEl.appendChild(opt);
+  });
+}
+
+function seleccionarCategoria(cat){
+  selectorCategorias.classList.add("hidden");
+  productosArea.classList.remove("hidden");
+  filterEl.value = cat;
+  renderProductos();
+  window.scrollTo({top:catalogo.offsetTop - 70, behavior:"smooth"});
+}
+
+function renderProductos(){
+  const datos = listaProductos();
+
+  const texto = (searchEl.value || "").toLowerCase().trim();
+  const categoria = filterEl.value;
+
+  const filtrados = datos.filter(p => {
+    const coincideCategoria = !categoria || p.categoria === categoria;
+    const textoProducto = [
+      p.nombre, p.marca, p.sku, p.descripcion, p.categoria
+    ].filter(Boolean).join(" ").toLowerCase();
+
+    return coincideCategoria && (!texto || textoProducto.includes(texto));
   });
 
   productsEl.innerHTML = "";
 
-  if(!results.length){
-    productsEl.innerHTML = `<div class="empty">No encontramos productos con esos criterios.</div>`;
+  if(!filtrados.length){
+    productsEl.innerHTML = `
+      <div class="empty" style="grid-column:1/-1">
+        No se encontraron productos con esos criterios.
+      </div>
+    `;
     return;
   }
 
-  results.forEach(p => {
+  filtrados.forEach(p => {
     const card = document.createElement("article");
-    card.className = "card";
+    card.className = "product";
+
+    const imagen = p.imagen || "";
+    const titulo = p.nombre || "Producto NEIMCSA";
+
     card.innerHTML = `
-      <div class="card-img">
-        <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
+      <div class="product-image">
+        <img src="${escapeAttr(imagen)}"
+             alt="${escapeAttr(titulo)}"
+             onerror="imagenNoDisponible(this)">
       </div>
-      <div class="card-body">
-        <span class="badge">${p.categoria}</span>
-        <div class="brand">${p.marca}</div>
-        <h3>${p.nombre}</h3>
-        <p>${p.descripcion}</p>
-        <div class="sku"><strong>SKU:</strong> ${p.sku}</div>
-        <a class="quote" target="_blank" rel="noopener" href="${quoteUrl(p)}">Cotizar producto</a>
+      <div class="product-body">
+        <span class="badge">${escapeHtml(p.categoria || "Producto")}</span>
+        <div class="brand-name">${escapeHtml(p.marca || "")}</div>
+        <h3>${escapeHtml(p.nombre || "")}</h3>
+        ${p.descripcion ? `<p>${escapeHtml(p.descripcion)}</p>` : ""}
+        ${p.sku ? `<div class="sku">SKU: ${escapeHtml(p.sku)}</div>` : ""}
+        <a class="quote" target="_blank" rel="noopener"
+           href="${crearWhatsApp(p)}">Cotizar producto</a>
       </div>
     `;
+
     productsEl.appendChild(card);
   });
 }
 
-searchEl.addEventListener("input", renderProducts);
-filterEl.addEventListener("change", renderProducts);
-renderProducts();
+function imagenNoDisponible(img){
+  const box = img.parentElement;
+  box.innerHTML = `<div class="no-image">Imagen no disponible<br><strong>${escapeHtml(img.alt || "Producto")}</strong></div>`;
+}
+
+function crearWhatsApp(p){
+  const numero = WHATSAPP_DEFAULT;
+  const mensaje =
+    `Hola NEIMCSA, deseo cotizar el siguiente producto:%0A%0A` +
+    `Producto: ${encodeURIComponent(p.nombre || "")}%0A` +
+    `Marca: ${encodeURIComponent(p.marca || "")}%0A` +
+    `SKU: ${encodeURIComponent(p.sku || "")}`;
+
+  if(!numero){
+    return "#contacto";
+  }
+  return `https://wa.me/${numero}?text=${mensaje}`;
+}
+
+function escapeHtml(value){
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+}
+
+function escapeAttr(value){
+  return escapeHtml(value);
+}
+
+searchEl.addEventListener("input", renderProductos);
+filterEl.addEventListener("change", function(){
+  if(filterEl.value){
+    selectorCategorias.classList.add("hidden");
+    productosArea.classList.remove("hidden");
+  }
+  renderProductos();
+});
+
+// Inicialmente: SOLO INICIO.
+mostrarInicio();
 </script>
+
 </body>
 </html>
