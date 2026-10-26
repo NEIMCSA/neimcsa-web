@@ -164,14 +164,6 @@ const productos = [
   },
   {
     "categoria": "Limpieza e higiene",
-    "marca": "SUMAC PLAST",
-    "nombre": "Silla Plegable Sinchi",
-    "sku": "PTMUEBAN0002-3",
-    "descripcion": "Plegable y super resistente. 51.1 × 30.5 × 39 cm.",
-    "imagen": "imagenes/limpieza/sumac-silla-plegable-sinchi.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
     "marca": "Hude",
     "nombre": "Escoba Hogareña",
     "sku": "No indicado en la ficha consultada",
@@ -257,14 +249,6 @@ const productos = [
     "sku": "No indicado en la ficha consultada",
     "descripcion": "Desatorador de ducha y cocina.",
     "imagen": "imagenes/limpieza/hude-mini-zopapo.jpg"
-  },
-  {
-    "categoria": "Limpieza e higiene",
-    "marca": "Basa Hogar",
-    "nombre": "Canasta Criollita con Asa",
-    "sku": "9",
-    "descripcion": "39.0 × 55.2 × 18.14 cm.",
-    "imagen": "imagenes/limpieza/basa-canasta-criollita.jpg"
   },
   {
     "categoria": "Limpieza e higiene",
