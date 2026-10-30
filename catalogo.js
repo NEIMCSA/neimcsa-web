@@ -889,5 +889,37 @@ const productos = [
     "sku": "9355 / 9356 / 9357 / 9358 / 9360",
     "descripcion": "Modelos rectangulares y con divisiones.",
     "imagen": "imagenes/limpieza/basa-tapers-food-click.jpg"
+},
+  {
+    "categoria": "Material didáctico",
+    "marca": "NEIMCSA",
+    "nombre": "Fracciones de madera",
+    "sku": "MD1",
+    "descripcion": "Material didáctico de madera para aprender jugando con las fracciones. Desarrolla el pensamiento lógico y facilita la comprensión matemática.",
+    "imagen": "imagenes/didacticos/Fracciones de madera NEIMCSA divertido y educativo.png"
+  },
+  {
+    "categoria": "Material didáctico",
+    "marca": "NEIMCSA",
+    "nombre": "Cubo Soma",
+    "sku": "W145-340",
+    "descripcion": "Juego didáctico de construcción que desarrolla la creatividad, la coordinación, la concentración y el pensamiento espacial.",
+    "imagen": "imagenes/didacticos/Cubo Soma_Creatividad en Juego.png"
+  },
+  {
+    "categoria": "Material didáctico",
+    "marca": "NEIMCSA",
+    "nombre": "Geoplano magnético",
+    "sku": "ML113",
+    "descripcion": "Material educativo para explorar figuras geométricas, desarrollar la creatividad y aprender mediante actividades prácticas.",
+    "imagen": "imagenes/didacticos/Geoplano Magnético_ Creatividad y Aprendizaje.png"
+  },
+  {
+    "categoria": "Material didáctico",
+    "marca": "NEIMCSA",
+    "nombre": "Yupana de madera",
+    "sku": "QQ-7009",
+    "descripcion": "Material didáctico para el aprendizaje de las matemáticas, el razonamiento lógico y las operaciones de conteo.",
+    "imagen": "imagenes/didacticos/Yupana de madera_ aprende jugando (1).png"
   }
 ];
