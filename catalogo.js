@@ -904,7 +904,7 @@ const productos = [
     "nombre": "Cubo Soma",
     "sku": "W145-340",
     "descripcion": "Juego didáctico de construcción que desarrolla la creatividad, la coordinación, la concentración y el pensamiento espacial.",
-    "imagen": "imagenes/didacticos/Cubo Soma_Creatividad.png"
+    "imagen": "https://neimcsa.com/imagenes/didacticos/Cubo%20Soma_Creatividad.png"
   },
   {
     "categoria": "Material didáctico",
